@@ -83,3 +83,10 @@ function showTotalMinutes() {
         (sum, session) => sum + session.minutes,
         0
     );
+console.log(`Total minutes studied: ${total}`);
+    showMenu();
+}
+
+function exitProgram() {
+    console.log("Goodbye!");
+    rl.close();
