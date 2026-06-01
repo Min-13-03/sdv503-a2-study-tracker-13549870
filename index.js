@@ -32,7 +32,6 @@ function showMenu() {
         }
     });
 }
-}
 
 function addSession() {
     rl.question("Enter study topic: ", (topic) => {
@@ -90,3 +89,7 @@ console.log(`Total minutes studied: ${total}`);
 function exitProgram() {
     console.log("Goodbye!");
     rl.close();
+}
+
+showMenu();
+
