@@ -40,3 +40,13 @@ function addSession() {
             console.log("Error: Topic cannot be empty.");
             return showMenu();
         }
+        rl.question("Enter duration in minutes: ", (minutesInput) => {
+            const minutes = Number(minutesInput);
+
+            if (
+                !Number.isInteger(minutes) ||
+                minutes <= 0
+            ) {
+                console.log(
+                    "Error: Minutes must be a whole number greater than zero."
+                );
