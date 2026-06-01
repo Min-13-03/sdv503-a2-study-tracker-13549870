@@ -50,3 +50,31 @@ function addSession() {
                 console.log(
                     "Error: Minutes must be a whole number greater than zero."
                 );
+                return showMenu();
+            }
+
+            sessions.push({
+                topic: topic.trim(),
+                minutes
+            });
+            console.log("Study session added.");
+            showMenu();
+        });
+    });
+}
+
+function listSessions() {
+    if (sessions.length === 0) {
+        console.log("No study sessions recorded.");
+    } else {
+        console.log("\nRecorded Sessions:");
+
+        sessions.forEach((session, index) => {
+            console.log(
+                `${index + 1}. ${session.topic} - ${session.minutes} minutes`
+            );
+        });
+    }
+
+    showMenu();
+}
