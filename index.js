@@ -78,3 +78,8 @@ function listSessions() {
 
     showMenu();
 }
+function showTotalMinutes() {
+    const total = sessions.reduce(
+        (sum, session) => sum + session.minutes,
+        0
+    );
